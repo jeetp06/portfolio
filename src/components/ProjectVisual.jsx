@@ -38,23 +38,53 @@ const FloodFillMiniChart = () => (
 );
 
 const PantryMiniChart = () => (
-  <div className="miniChart pantryMini" aria-label="Animated pantry recommendation flow">
-    <div className="scanFrame">
+  <div className="miniChart pantryMini" aria-label="Animated OCR pantry and recipe recommendation flow">
+    <div className="ocrPhone">
+      <span className="lensCorner topLeft" />
+      <span className="lensCorner topRight" />
+      <span className="lensCorner bottomLeft" />
+      <span className="lensCorner bottomRight" />
+      <div className="receipt">
+        <span>milk</span>
+        <span>eggs</span>
+        <span>rice</span>
+      </div>
+      <span className="scanLine" />
+    </div>
+    <div className="pantryShelf">
+      <span className="foodItem can" />
+      <span className="foodItem carrot" />
+      <span className="foodItem jar" />
+    </div>
+    <span className="flowArrow" />
+    <div className="recipeCardMini">
+      <span className="recipeThumb" />
       <span />
       <span />
       <span />
     </div>
-    <div className="recipeNodes">
-      <i />
-      <i />
-      <i />
-    </div>
-    <span className="scanLine" />
-    <span className="chartLabel">OCR to recipe match</span>
+    <span className="chartLabel">OCR pantry to recipes</span>
+  </div>
+);
+
+const MatchPointMiniChart = () => (
+  <div className="miniChart matchMini" aria-label="Animated tennis match preview">
+    <span className="tennisCourt" />
+    <span className="courtLine serviceA" />
+    <span className="courtLine serviceB" />
+    <span className="courtNet" />
+    <span className="tennisPlayer playerA" />
+    <span className="tennisPlayer playerB" />
+    <span className="tennisRacket racketA" />
+    <span className="tennisRacket racketB" />
+    <span className="tennisBall" />
+    <span className="matchArc" />
+    <span className="chartLabel">tennis match finder</span>
   </div>
 );
 
 export default function ProjectVisual({ title }) {
+  if (title === "MatchPoint") return <MatchPointMiniChart />;
   if (title === "Apple Options Volatility Prediction") return <VolatilityMiniChart />;
   if (title === "Asynchronous Image Flood-Fill Engine") return <FloodFillMiniChart />;
   if (title === "CookingPal - Pantry & Recipes") return <PantryMiniChart />;

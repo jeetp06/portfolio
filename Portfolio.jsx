@@ -501,7 +501,7 @@ export default function Portfolio() {
 
       {/* STATS */}
       <section className="stats" data-reveal>
-        <div className="stat"><span className="statNum">3.74</span><span className="statLab">GPA / 4.0</span></div>
+        <div className="stat"><span className="statNum">3.59</span><span className="statLab">GPA / 4.0</span></div>
         <div className="stat"><span className="statNum">Dec 2027</span><span className="statLab">expected B.S.</span></div>
         <div className="stat"><span className="statNum">Math + CS</span><span className="statLab">UIUC</span></div>
         <div className="stat"><span className="statNum">US Citizen</span><span className="statLab">work authorized</span></div>

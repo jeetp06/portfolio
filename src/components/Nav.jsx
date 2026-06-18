@@ -23,7 +23,7 @@ export default function Nav({ scrolled, menuOpen, setMenuOpen, theme, onToggleTh
         <a href={RESUME_URL} download onClick={() => setMenuOpen(false)}>Resume</a>
       </nav>
       <button className="themeBtn" onClick={onToggleTheme} aria-label="Toggle color theme">
-        <span className="themeGlyph">{theme === "dark" ? "Sun" : "Moon"}</span>
+        <span className="themeGlyph">{theme === "dark" ? "☀" : "☾"}</span>
         <span className="themeWord">{theme === "dark" ? "Light" : "Dark"}</span>
       </button>
     </header>
